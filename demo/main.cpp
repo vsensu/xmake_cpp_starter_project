@@ -1,7 +1,8 @@
 #include <iostream>
-#include "hello.h"
+#include "core.h"
 
 int main() {
-  say("hello world");
-  std::cout << "1 + 1 = " << add(1, 1) << '\n';
+  core::say("hello demo\n");
+  std::cout << core::add(1, 2) << '\n';
+  core::hello();
 }

@@ -1,3 +1,7 @@
 target("core")
     set_kind("static")
+    add_includedirs("$(projectdir)/deps/headeronly", "$(projectdir)/deps/libs", "$(projectdir)/deps/src")
+    add_linkdirs("$(projectdir)/deps/libs/lib_example")
     add_files("*.cpp")
+    add_deps("src_example")
+    add_links("lib_example")

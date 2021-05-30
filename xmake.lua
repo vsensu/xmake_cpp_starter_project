@@ -10,13 +10,13 @@ set_languages("c99", "cxx20")
 add_rules("mode.debug", "mode.release", "mode.minsizerel")
 
 -- include project sources
-includes("src", "test", "demo")
+includes("deps", "src", "test", "demo")
 
 task("ie")
     on_run("scripts/tasks/init_env")
     set_menu {
         usage = "xmake ie",
-        description = "初始化开发环境!",
+        description = "init env!",
         options = {}
     } 
 
@@ -24,6 +24,6 @@ task("dc")
     on_run("scripts/tasks/dist_clean")
     set_menu {
         usage = "xmake dc",
-        description = "清理中间文件!",
+        description = "deep clean",
         options = {}
     }
