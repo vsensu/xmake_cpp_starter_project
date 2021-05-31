@@ -21,9 +21,17 @@ task("ie")
     } 
 
 task("dc")
-    on_run("scripts/tasks/dist_clean")
+    on_run("scripts/tasks/deep_clean")
     set_menu {
         usage = "xmake dc",
         description = "deep clean",
+        options = {}
+    }
+
+task("reset")
+    on_run("scripts/tasks/reset")
+    set_menu {
+        usage = "xmake reset",
+        description = "reset xmake env",
         options = {}
     }
