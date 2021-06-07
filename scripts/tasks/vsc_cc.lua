@@ -12,4 +12,6 @@ function main(...)
     print("move file...")
     os.tryrm(".vscode/compile_commands.json")
     os.trymv("compile_commands.json", ".vscode/compile_commands.json")
+    os.tryrm(".vscode/c_cpp_properties.json")
+    os.trycp("scripts/tasks/c_cpp_properties.json", ".vscode/c_cpp_properties.json")
 end
